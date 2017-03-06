@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node server.js",
-    "lint": "esw server.js src --watch"
+    "lint": "esw server.js src --watch",
+    "test": "mocha --report spec ./src/utils/testUtils.js src/**/*.test.js"
   },
   "keywords": [],
   "author": "",
@@ -14,14 +14,37 @@
   "devDependencies": {
     "eslint": "^3.17.0",
     "eslint-plugin-react": "^6.10.0",
-    "eslint-watch": "^3.0.0"
+    "eslint-watch": "^3.0.0",
+    "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {
     "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "css-loader": "^0.26.2",
+    "enzyme": "^2.7.1",
+    "expect": "^1.20.2",
     "express": "^4.15.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^9.11.0",
+    "materialize-css": "^0.98.0",
+    "materializecss": "^1.0.11",
+    "mocha": "^3.2.0",
     "npm-run-all": "^4.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.2",
+    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.13.2",
+    "supertest": "^3.0.0",
+    "url-loader": "^0.5.8",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.17.1"
