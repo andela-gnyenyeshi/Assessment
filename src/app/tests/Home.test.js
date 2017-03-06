@@ -10,7 +10,7 @@ describe('Tests Home Component', () => {
         data: []
       }
     };
-    let renderedComponent = shallow(<Home {...props}/>)
+    let renderedComponent = shallow(<Home {...props}/>);
     expect(renderedComponent.text()).toInclude('Github');
-  })
+  });
 });

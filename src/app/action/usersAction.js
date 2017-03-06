@@ -21,7 +21,7 @@ export function fetchPhpUsers() {
       dispatch(fetchPhpUsersSuccess(data.data.items))
     })
     .catch((err) => {
-      dispatcj(fetchPhpUsersFail(err));
-    })
-  }
+      dispatch(fetchPhpUsersFail(err));
+    });
+  };
 }

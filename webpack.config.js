@@ -1,7 +1,7 @@
 import path from 'path';
 
 export default {
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   entry: [path.resolve(__dirname, 'src/index.js'), './styles/style.css', './node_modules/materialize-css/bin/materialize.css', './node_modules/materialize-css/bin/materialize.js'],
   output: {
     filename: 'bundle.js',
