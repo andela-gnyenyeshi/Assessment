@@ -1,6 +1,6 @@
 # assessment
 
-Clone the app and Run npm i
+Clone the app and run *npm i*
 
-Run npm start
+Run *npm start*
 
