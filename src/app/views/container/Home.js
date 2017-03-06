@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
 export class Home extends React.Component {
-  redirect(user) {
-    window.location.href = 'https://github.com/' + user;
-  }
-
   render () {
     const users = this.props.users.data ? this.props.users.data : [];
     return (
@@ -21,12 +17,12 @@ export class Home extends React.Component {
           <tbody>
             {users && users.map((user) => 
             <tr key={user.id}>
-              <td id="user" onClick={() => this.redirect(user.login)}>{user.login}</td>
+              <td id="user"><a target="blank" href={`https://github.com/${user.login}`}>{user.login}</a></td>
               <td>{user.type}</td>
             </tr>)}
-            {users.length < 0 && <p>fething users...</p>}
           </tbody>
         </table>
+        {users.length === 0 && <p>Fetching users...</p>}
       </div>
     );
   }
